@@ -1,0 +1,21 @@
+//@import "bootstrap/scss/bootstrap.scss"; // не выделяется в чанк - необходимо импортировать в entry js
+@import "common.css";
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../assets/fonts/Rainbow in June.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1 {
+  color: red;
+  font-family: 'MyFont';
+  font-size: 40px;
+}
+
+.example-admin {
+  background-image: url('../assets/images/icon.png');
+  height: 228px;
+  margin: 20px;
+}

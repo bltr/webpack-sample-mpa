@@ -1,0 +1,25 @@
+version: '3.6'
+
+services:
+  app:
+    image: php:7.4-cli-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - 8081:8081
+    command: "php -S 0.0.0.0:8081 -t /app/public /app/server.php"
+
+  node:
+    image: node:alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - node:/home/node
+    ports:
+      - 8080:8080
+    command: "npm run serve"
+
+volumes:
+  node:
+    name: node
